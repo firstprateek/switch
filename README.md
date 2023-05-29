@@ -1,26 +1,33 @@
-# wepack-starter-template
+# theme-switch
 
-A minimal starter project for building frontend applications, bundled using Webpack 5.
+A webcomponent for a toggle switch
 
-## Getting started
+## Live Demo
 
-Install dependencies (incl. webpack). Note: This project only defines dev dependencies.
+[Demo](https://firstprateek.github.io/switch/)
+
+## Installation
 
 ```bash
-npm i
+npm install @firstprateek/switch --save
 ```
 
-Entry point is src/index.js. Built content is stored under dist/. To build your project, run:
-```bash
-npm run build
+## Usage
+
+```js
+// In index.js
+import ThemeSwitch from '@firstprateek/switch';
 ```
 
-To launch development server, run:
-```bash
-npm run dev
-```
-
-To deploy the built index.html page to the project's github page `https://<username>.github.io/<project-name>/`, run:
-```bash
-npm run deploy
+```jsx
+<!DOCTYPE html>
+<head>
+    <script src="./index.js"></script>
+</head>
+<body>
+    <main>
+        <theme-switch></theme-switch>
+    </main>
+</body>
+</html>
 ```

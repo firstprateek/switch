@@ -7,10 +7,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><%= htmlWebpackPlugin.options.title %></title>
+    <script defer>
+      addEventListener("DOMContentLoaded", (event) => {
+        const $switch = document.querySelector('theme-switch');
+        const $main = document.querySelector('main');
+
+        $switch.addEventListener('change', (event) => {
+          $main.innerHTML = '';
+          
+          const p = document.createElement('p');
+          p.textContent = JSON.stringify(event.detail);
+
+          $main.appendChild(p);
+        });
+      });
+    </script>
   </head>
   <body>
+    <theme-switch></theme-switch>
     <main>
-      <h1>Hello World</h1>
     </main>
   </body>
 </html>
